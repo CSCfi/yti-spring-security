@@ -30,7 +30,7 @@ public final class YtiUser implements UserDetails {
     private final String email;
     private final String firstName;
     private final String lastName;
-    private final UUID id;
+    private final String id;
     private final boolean superuser;
     private final boolean newlyCreated;
     private final Map<UUID, Set<Role>> rolesInOrganizations;
@@ -43,7 +43,7 @@ public final class YtiUser implements UserDetails {
     public YtiUser(final String email,
                    final String firstName,
                    final String lastName,
-                   final UUID id,
+                   final String id,
                    final boolean superuser,
                    final boolean newlyCreated,
                    final LocalDateTime tokenCreatedAt,
@@ -58,7 +58,7 @@ public final class YtiUser implements UserDetails {
                     final String email,
                     final String firstName,
                     final String lastName,
-                    final UUID id,
+                    final String id,
                     final boolean superuser,
                     final boolean newlyCreated,
                     final LocalDateTime tokenCreatedAt,
@@ -118,7 +118,7 @@ public final class YtiUser implements UserDetails {
         return lastName;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 

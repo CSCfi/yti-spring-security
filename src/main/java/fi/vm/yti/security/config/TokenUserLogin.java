@@ -6,7 +6,7 @@ import fi.vm.yti.security.YtiUser;
 
 public final class TokenUserLogin {
 
-    private final UUID id;
+    private final String id;
     private final String email;
     private final String firstName;
     private final String lastName;
@@ -18,7 +18,7 @@ public final class TokenUserLogin {
         this.lastName = ytiUser.getLastName();
     }
 
-    UUID getId() {
+    String getId() {
         return id;
     }
 
